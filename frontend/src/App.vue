@@ -8,6 +8,7 @@
         <RouterLink v-permission="[UserRole.INSTRUCTOR, UserRole.ADMIN]" to="/instructor/courses">讲师管理</RouterLink>
       </nav>
       <div class="account">
+        <NotificationCenter v-if="auth.user" />
         <span v-if="auth.user">{{ auth.user.name }} · {{ auth.user.role }}</span>
         <el-button v-if="auth.user" text @click="auth.logout()">退出</el-button>
         <el-button v-else type="primary" @click="$router.push('/login')">登录</el-button>
@@ -23,6 +24,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { UserRole } from '@/constants/enums'
 import { useAuthStore } from '@/stores/authStore'
+import NotificationCenter from '@/components/NotificationCenter.vue'
 
 const auth = useAuthStore()
 </script>

@@ -30,3 +30,10 @@ class UserRole(StrEnum):
     STUDENT = "STUDENT"
     INSTRUCTOR = "INSTRUCTOR"
     ADMIN = "ADMIN"
+
+
+class NotificationType(StrEnum):
+    SYSTEM = "SYSTEM"
+    COURSE = "COURSE"
+    ORDER = "ORDER"
+    ANNOUNCEMENT = "ANNOUNCEMENT"

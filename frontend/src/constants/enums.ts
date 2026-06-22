@@ -29,6 +29,20 @@ export enum UserRole {
   ADMIN = 'ADMIN'
 }
 
+export enum NotificationType {
+  SYSTEM = 'SYSTEM',
+  COURSE = 'COURSE',
+  ORDER = 'ORDER',
+  ANNOUNCEMENT = 'ANNOUNCEMENT'
+}
+
+export const notificationTypeLabel: Record<NotificationType, string> = {
+  [NotificationType.SYSTEM]: '系统',
+  [NotificationType.COURSE]: '课程',
+  [NotificationType.ORDER]: '订单',
+  [NotificationType.ANNOUNCEMENT]: '公告'
+}
+
 export const courseLevelLabel: Record<CourseLevel, string> = {
   [CourseLevel.BEGINNER]: '入门',
   [CourseLevel.INTERMEDIATE]: '进阶',
